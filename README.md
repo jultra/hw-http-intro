@@ -81,6 +81,7 @@ Create and save (ideally with extension `.html`) the following minimal file:
 
 ```html
 <!DOCTYPE html>
+<html>
 <head>
 </head>
 <body>
@@ -93,6 +94,7 @@ Create and save (ideally with extension `.html`) the following minimal file:
     <input type="submit" name="login" value="Log In!">
   </form>
 </body>
+</html>
 ```
 
 <details><summary>An HTML form when submitted generates an HTTP `POST` request from the browser.  In order to reach your fake server, with what URL should you replace FAKE-SERVER-URL-HERE in the above file?</summary> <p><blockquote> **Local computer:** `http://localhost:8081` <br> **Codio:** `https://box-name-8081.codio.io/` where box-name is the two-word phrase you see in your terminal prompt. Example `codio@emerald-tripod:~/workspace$` would be `https://emerald-tripod-8081.codio.io/`</blockquote></p></details>
