@@ -28,22 +28,21 @@ In the beginning was the command line, and that's where we'll be for
 this intro to HTTP.  We will use two command-line
 tools. [cURL](https://en.wikipedia.org/wiki/CURL) (pronounced "curl")
 to act as a SaaS client, and
-[netcat](https://en.wikipedia.org/wiki/CURL) (pronounced "netcat") to
+[netcat](https://en.wikipedia.org/wiki/netcat) (pronounced "netcat") to
 act as a SaaS server.
 
-We will also be working with two real web sites:
-[Watchout4snakes](http://watchout4snakes.com), a handy random-word
-generator that will also be featured in a future assignment; and
+We will also be working with two real web sites: a
+[random-word generator](http://randomword.saasbook.info) that will also be featured in a future assignment, and
 a simple [cookie demo site](https://github.com/saasbook/simple-cookie-demo)
 written just for this assignment and deployed on Heroku.
 
-Start by visiting Watchout4snakes in your favorite browser 
+Start by visiting the random word generator in your favorite browser 
 to get a "user's view" of what's on the front page.
 
 ## Learning goal: understand basic parts of an HTTP request and response
 
 The most basic use of `curl` is to issue an HTTP GET or POST to a
-site, so try `curl 'http://watchout4snakes.com'` and verify that what
+site, so try `curl 'http://randomword.saasbook.info'` and verify that what
 you see printed could plausibly correspond to the page content you
 viewed in your browser previously.  (The single quotes are not
 technically necessary in this case, but you should get used to using
@@ -134,7 +133,7 @@ point of view, let's see what the response looks like from the
 client's point of view.  In particular, `curl` just prints out the
 content sent back from the server, but we'd like to see the server
 headers.  Try `curl --help` to see the help and verify that the
-command line `curl -i 'http://watchout4snakes.com'` will
+command line `curl -i 'http://randomword.saasbook.info'` will
 display BOTH  the server's response headers AND then the response body.
 
 <details>
@@ -168,7 +167,7 @@ display BOTH  the server's response headers AND then the response body.
 <details>
   <summary>
   What would the server response code be if you tried to fetch a
-  nonexistent URL on Watchout4snakes?  Try it using the procedure above.
+  nonexistent URL on the random word generator site?  Try it using the procedure above.
   </summary>
   <p><blockquote>
   The HTTP status code is 404.  The words "Not found" after the status
