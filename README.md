@@ -70,7 +70,7 @@ Now that you've seen what an HTTP request looks like from the server's point of 
 <details><summary> Based on the server headers, what is the server's HTTP response code giving the status of the client's request, and what version of the HTTP protocol did the server use to respond to the client?</summary><p><blockquote>The first line tells us that HTTP 1.1 was used, and that the request succeeded with code 200.</blockquote></p></details>
 
 
-<details><summary> Any given Web request might return an HTML page, an image, or a number of other types of entities.  Is there anything in the headers that you think tells the client how to interpret the result? </summary><p><blockquote>The `Content-Type:` header in this case tells the client that the content returned is an HTML page.</blockquote></p></details>
+<details><summary> Any given Web request might return an HTML page, an image, or a number of other types of entities.  Is there anything in the headers that you think tells the client how to interpret the result? </summary><p><blockquote>The <code>Content-Type</code> header in this case tells the client that the content returned is an HTML page.</blockquote></p></details>
 
 
 
