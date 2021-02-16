@@ -44,9 +44,9 @@ Save the contents of the above `curl` command to a file and view the file as a b
 Hint 1: adding `>filename` to the end of a shell command line causes the command's output to be stored in that file rather than displayed in the terminal window.
 
 Hint 2: Previewing file in a browser:
-  | Local computer | Codio |
-  |-----|------|
-  | If you are saving files on your own computer's hard drive, store the command output in a file with an extension .html and open the created file with your browser.   | When you create or save files they appear in a "file tree" down the left-hand side; you can open files in the editor by clicking or double-clicking on the file's name. To preview a file in a browser, right-click and select "Preview static" |
+  | Local computer |
+  |-----|
+  | If you are saving files on your own computer's hard drive, store the command output in a file with an extension .html and open the created file with your browser. |
 
 <details><summary>  What are two main differences between the preview you see and what you saw in a "normal" Web browser? What explains these differences?  </summary>  <p><blockquote>  There is no picture and no visual styling of the page elements, because both the picture and the stylesheet (.css file) have to be loaded separately.  The HTTP request you made only loaded the main HTML file.  In a regular browser, the browser would automatically follow the links to download and display the image, and to download the stylesheet file and apply the styling information. </blockquote></p></details>
 
@@ -56,7 +56,7 @@ Tell Netcat to listen on port 8081: `nc -l 8081`
 
 (As with most Unix command-line programs, you can say `nc --help` to get a listing of other options, or `man nc` to view its detailed "manual page.")
 
-<details><summary> Assuming you're running `curl` from another shell (on the same Codio workspace, if applicable), what URL will you have to pass to `curl` to try to access your fake server, and why? </summary><p><blockquote><code>http://localhost:8081</code> is the URL.  Localhost always means "this same machine" and 8081 is the port number.  Without the port number, the default would be 80, which is the IANA default port for Web servers (or 443 for HTTPS-secured servers).  You could also use localhost's special IP address directly: <code>http://127.0.0.1:8081</code> would also work.  </blockquote></p></details>
+<details><summary> Assuming you're running `curl` from another shell , what URL will you have to pass to `curl` to try to access your fake server, and why? </summary><p><blockquote><code>http://localhost:8081</code> is the URL.  Localhost always means "this same machine" and 8081 is the port number.  Without the port number, the default would be 80, which is the IANA default port for Web servers (or 443 for HTTPS-secured servers).  You could also use localhost's special IP address directly: <code>http://127.0.0.1:8081</code> would also work.  </blockquote></p></details>
 
 Visit your "fake" server with `curl` and the correct URL.  Your "fake" server will receive the HTTP client request.
 
@@ -119,7 +119,7 @@ Create and save (ideally with extension `.html`) the following minimal file:
 </html>
 ```
 
-<details><summary>An HTML form when submitted generates an HTTP `POST` request from the browser.  In order to reach your fake server, with what URL should you replace FAKE-SERVER-URL-HERE in the above file?</summary> <p><blockquote> **Local computer:** `http://localhost:8081` <br> **Codio:** `https://box-name-8081.codio.io/` where box-name is the two-word phrase you see in your terminal prompt. Example `codio@emerald-tripod:~/workspace$` would be `https://emerald-tripod-8081.codio.io/`</blockquote></p></details>
+<details><summary>An HTML form when submitted generates an HTTP `POST` request from the browser.  In order to reach your fake server, with what URL should you replace FAKE-SERVER-URL-HERE in the above file?</summary> <p><blockquote> **Local computer:** `http://localhost:8081` </blockquote></p></details>
 
 Modify the file, open it in your computer's Web browser, fill in some values in the form, and submit it.  Now go to your terminal and look at the window where `nc` is listening.  
 
